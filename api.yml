@@ -1,0 +1,97 @@
+swagger: "2.0"
+info:
+  description: "API для создания и печати чеков"
+  version: "1.0.0"
+  title: "Сheck API"
+host: "localhost:8000"
+basePath: "/api"
+tags:
+- name: "API"
+  description: "Наше API"
+paths:
+  /api:
+    post:
+      summary: "Добавляет новый чек"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "JSON с информацией о чеке"
+        required: true
+        schema:
+          $ref: "#/definitions/Check"
+      responses:
+        "ok":
+          description: "successful operation"
+          schema:
+              $ref: "#/definitions/OK_1"
+        "error":
+          description: "Ошибка"
+          schema:
+              $ref: "#/definitions/Error"
+    get:
+      summary: "Печатает готовые чеки"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "api_key"
+        in: "query"
+        description: "Api_key принтера"
+        required: true
+        type: "string"
+      responses:
+        "ok":
+          description: "successful operation"
+          schema:
+              $ref: "#/definitions/OK"
+        "error":
+          description: "Ошибка"
+          schema:
+              $ref: "#/definitions/Error"          
+
+definitions:
+  Check:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        example: "1"
+      point_id:
+        type: "integer"
+        example: "1"
+      type:
+        type: "integer"
+        example: "0"       
+      products:
+        type: "array"
+        items:
+          type: "string"
+  OK:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        example: "ok"
+      links:
+        type: "array"
+        items:
+          type: "string"
+          example: "link_1"
+  OK_1:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        example: "ok"
+  Error:
+    type: "object"
+    properties:
+      status:
+        type: "string"
+        example: "error"
+      error:
+        type: "string"
+        example: "Текст ошибки"      

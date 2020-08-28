@@ -1,0 +1,81 @@
+[
+    {
+      "model": "api.printer",
+      "pk": 1,
+      "fields": {
+        "name": "Printer №1",
+        "api_key": "1a",
+        "check_type":"0",
+        "point_id":1
+    }
+    },
+    {
+        "model": "api.printer",
+        "pk": 2,
+        "fields": {
+          "name": "Printer №2",
+          "api_key": "2b",
+          "check_type":"0",
+          "point_id":1
+        }
+    },
+    {
+        "model": "api.printer",
+        "pk": 3,
+        "fields": {
+          "name": "Printer №3",
+          "api_key": "3c",
+          "check_type":"1",
+          "point_id":1
+        }
+    },
+    {
+        "model": "api.printer",
+        "pk": 4,
+        "fields": {
+          "name": "Printer №4",
+          "api_key": "4d",
+          "check_type":"0",
+          "point_id":2
+        }
+    },
+    {
+        "model": "api.printer",
+        "pk": 5,
+        "fields": {
+          "name": "Printer №5",
+          "api_key": "5e",
+          "check_type":"1",
+          "point_id":2
+        }
+    },
+    {
+        "model": "api.printer",
+        "pk": 6,
+        "fields": {
+          "name": "Printer №6",
+          "api_key": "6f",
+          "check_type":"0",
+          "point_id":3
+        }
+    },
+    {
+        "model": "api.printer",
+        "pk": 7,
+        "fields": {
+          "name": "Printer №7",
+          "api_key": "7g",
+          "check_type":"1",
+          "point_id":3
+        }
+    },    {
+        "model": "api.printer",
+        "pk": 8,
+        "fields": {
+          "name": "Printer №8",
+          "api_key": "8h",
+          "check_type":"1",
+          "point_id":3
+        }
+    }
+]
